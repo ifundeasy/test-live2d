@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Live2D on Browser</title>
+  <meta name="description" content="Track face and body rigs just your browser webcam!" />
+  <meta name="viewport"
+    content="viewport-fit=cover, user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" />
+
+  <!-- Favicon; Generated from https://realfavicongenerator.net -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/public/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon-16x16.png">
+  <link rel="manifest" href="/public/site.webmanifest">
+  <link rel="mask-icon" href="/public/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#86a8be">
+  <meta name="theme-color" content="#86a8be">
+
+  <!-- Custom style -->
+  <link rel="stylesheet" href="/public/styles/index.css" />
+
+  <!-- Injected server variable -->
+  <script>
+    window.ENV = "<%- ENV %>";
+    window.MODEL_LIVE_2D = "<%- MODEL_LIVE_2D %>";
+  </script>
+</head>
+
+<body>
+  <canvas id="live2d"></canvas>
+  <div class="preview">
+    <video class="input_video" width="1280px" height="720px"></video>
+    <canvas class="guides"></canvas>
+  </div>
+  <!-- Live2D SDK  -->
+  <script src="/public/libs/live2dcubismcore.min.js"></script>
+  <script src="/public/libs/webgl-live2d.min.js"></script>
+  <!-- PixiJS Renderer -->
+  <script src="/node_modules/pixi.js/dist/pixi.min.js"></script>
+  <!-- PixiJS Live2D Plugin -->
+  <script src="/node_modules/pixi-live2d-display/dist/index.min.js"></script>
+  <!-- Kalidokit Kinematic Solver -->
+  <script src="/node_modules/kalidokit/dist/kalidokit.umd.js"></script>
+  <!-- Mediapipe Drawing Tools -->
+  <script src="/node_modules/@mediapipe/drawing_utils/drawing_utils.js"></script>
+  <!-- Mediapipe Camera Tools -->
+  <script src="/node_modules/@mediapipe/camera_utils/camera_utils.js"></script>
+  <!-- Mediapipe Face Mesh -->
+  <script src="/node_modules/@mediapipe/face_mesh/face_mesh.js"></script>
+  <script src="/public/scripts/index.js"></script>
+</body>
+
+</html>

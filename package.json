@@ -1,0 +1,50 @@
+{
+  "name": "test-live2d",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "app.js",
+  "scripts": {
+    "lint": "eslint --ignore-path .gitignore .",
+    "lint:fix": "eslint --ignore-path .gitignore . --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "export NODE_ENV=production && node server.js",
+    "start:dev": "nodemon server.js",
+    "update": "ncu -u && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ifundeasy/test-live2d.git"
+  },
+  "keywords": [
+    "Live2D",
+    "Webcam",
+    "motion",
+    "detector"
+  ],
+  "author": "Afa <ifundeasy@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@fastify/static": "^6.5.0",
+    "@fastify/view": "^7.1.2",
+    "@mediapipe/camera_utils": "^0.3.1640029074",
+    "@mediapipe/drawing_utils": "^0.3.1620248257",
+    "@mediapipe/face_mesh": "^0.4.1633559619",
+    "bluebird": "^3.7.2",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.8",
+    "fastify": "^4.10.0",
+    "kalidokit": "^1.1.5",
+    "lodash": "^4.17.21",
+    "pixi-live2d-display": "^0.4.0",
+    "pixi.js": "^7.0.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.27.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-jest": "^27.1.5",
+    "nodemon": "^2.0.20",
+    "npm-check-updates": "^16.4.1"
+  }
+}
